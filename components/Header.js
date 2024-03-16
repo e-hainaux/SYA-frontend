@@ -57,6 +57,14 @@ function Header() {
             >
               Actus
             </ScrollLink>
+            <ScrollLink
+              className={styles.a}
+              to="contact"
+              smooth={true}
+              duration={500}
+            >
+              Contact
+            </ScrollLink>
           </ul>
         </nav>
       </div>
