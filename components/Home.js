@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
-import PresentationSara from "../components/PresentationSara";
+import PresentationSara from "./PresentationSara";
 
 function Home() {
   return (
