@@ -6,7 +6,7 @@ import photoSara from "../public/images/PhotoSara.jpg";
 
 const PresentationSara = () => {
   return (
-    <section className={styles.segment}>
+    <section id="PresentationSara" className={styles.segment}>
       <h2 className={styles.titre}>- Sara Lovera -</h2>
       <div className={`${styles.textePhoto}`}>
         <div className={`${styles.imageWrapper}`}>

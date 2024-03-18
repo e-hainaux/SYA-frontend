@@ -26,13 +26,13 @@ function Header() {
           />
         </div>
         <q>Des pauses dans la pose guidées par quelques proses.</q>
-        <nav className={styles.nav}>
+        {/* <nav className={styles.nav}>
           <ul className={styles.ul}>
             <ScrollLink
               className={`${isHoveredSara ? styles.hovered : styles.a} ${
                 styles.pointer
               }`}
-              to="presentationSara"
+              to="PresentationSara"
               smooth={false}
               duration={800}
               onMouseEnter={() => setIsHoveredSara(true)}
@@ -93,7 +93,7 @@ function Header() {
               Contact
             </ScrollLink>
           </ul>
-        </nav>
+        </nav> */}
       </div>
     </div>
   );
