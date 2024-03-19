@@ -10,9 +10,24 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: whitesmoke;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  /* border: 1px solid red; */
 }
-
+.titre {
+  color: whitesmoke;
+  width: 50%;
+  height: 45px;
+  max-width: 300px;
+  min-width: 250px;
+  font-size: 1.75rem;
+  text-align: center;
+  vertical-align: middle;
+  margin: 30px auto;
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 20px 5px 20px 5px;
+}
 .formGroup {
   margin-bottom: 20px;
 }

@@ -7,9 +7,18 @@
 }
 
 .titre {
+  color: whitesmoke;
+  width: 50%;
+  height: 45px;
+  max-width: 300px;
+  min-width: 250px;
   font-size: 1.75rem;
   text-align: center;
+  vertical-align: middle;
   margin: 30px auto;
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 20px 5px 20px 5px;
 }
 
 .textePhoto {
@@ -30,6 +39,8 @@
   margin: 0 auto;
   text-indent: 30px;
   padding: 15px 30px;
+  background-color: #ebebeb;
+  border-radius: 5px;
 }
 .imageWrapper {
   width: 100%;
@@ -37,6 +48,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
   /* border: 1px solid red; */
 }
 .imageContainer {
@@ -52,6 +64,8 @@
 .photoSara {
   max-width: 100%;
   max-height: 100%;
+  border-radius: 20px;
+
   /* object-fit: cover; ou 'cover' ? */
 }
 

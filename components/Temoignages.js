@@ -4,7 +4,7 @@ import styles from "../styles/SectionCSS.module.css";
 export default function Temoignages() {
   return (
     <section className={styles.segment} id="Temoignages">
-      <h2 className={styles.titre}>- Témoignages -</h2>
+      <h2 className={styles.titre}>Témoignages</h2>
       <p className={styles.paragraphe}>
         Je n'avais jamais pratiqué le yoga avant de rencontrer Sara et j'avais
         des clichés en tête sur cette pratique tant sur la souplesse et la

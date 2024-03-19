@@ -22,7 +22,7 @@ const Formulaire = () => {
     }
 
     // Traitement du formulaire (envoi des données, etc.)
-    // À compléter selon vos besoins
+    // À compléter selon besoins
 
     // Réinitialisation du formulaire après soumission
     setPrenom("");
@@ -36,8 +36,8 @@ const Formulaire = () => {
 
   return (
     <section id="Formulaire" className={styles.segment}>
+      <h2 className={styles.titre}>Contact</h2>
       <div className={styles.formulaireContainer}>
-        <h2>Formulaire de Contact</h2>
         <form onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="prenom">Prénom *</label>

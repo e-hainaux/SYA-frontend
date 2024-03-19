@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/presentationSara.module.css";
+import styles from "../styles/PresentationSara.module.css";
 import Image from "next/image";
 
 import photoSara from "../public/images/PhotoSara.jpg";
@@ -7,7 +7,7 @@ import photoSara from "../public/images/PhotoSara.jpg";
 const PresentationSara = () => {
   return (
     <section id="PresentationSara" className={styles.segment}>
-      <h2 className={styles.titre}>- Sara Lovera -</h2>
+      <h2 className={styles.titre}>Sara Lovera</h2>
       <div className={`${styles.textePhoto}`}>
         <div className={`${styles.imageWrapper}`}>
           <div
