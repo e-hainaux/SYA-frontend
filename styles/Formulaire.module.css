@@ -1,0 +1,55 @@
+.segment {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.formulaireContainer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+.info {
+  text-align: center;
+  color: gray;
+  font-size: 0.8rem;
+}
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textarea {
+  min-height: 100px;
+}
+
+.message {
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  width: 110px;
+  padding: 10px 20px;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}

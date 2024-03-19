@@ -7,7 +7,9 @@ import BanderolePhotos from "./BanderolePhotos";
 import Break from "./Break";
 import Prestations from "./Prestations";
 import Temoignages from "./Temoignages";
+import Actus from "./Actus";
 import Footer from "./Footer";
+import Formulaire from "./Formulaire";
 
 function Home() {
   return (
@@ -21,7 +23,9 @@ function Home() {
       <Break />
       <Temoignages />
       <Break />
+      <Actus />
       <Break />
+      <Formulaire />
       <Footer />
     </div>
   );

@@ -21,9 +21,9 @@
   height: 100vh;
   font-size: 5rem;
   text-align: center;
-  margin: 20px 20px 0 20px;
+  margin: 0;
   background-color: whitesmoke;
-  border-radius: 80px 10px 0px 0px;
+  border-radius: 50px 8px 0px 0px;
   /* border: 1px dotted orangered; */
   /* overflow: hidden; */
 }
@@ -36,7 +36,7 @@
   color: gray;
   padding: 15px 0;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-style: italic;
 }
 

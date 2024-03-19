@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../styles/Prestations.module.css";
+import styles from "../styles/SectionCSS.module.css";
 
 export default function Prestations() {
   return (
-    <section className={styles.segment} id="presentationYoga">
+    <section className={styles.segment} id="Prestations">
       <h2 className={styles.titre}>- Prestations -</h2>
       <h3 className={styles.titreSecondaire}>En structure</h3>
       <p className={styles.paragraphe} id="dans-les-structures">
