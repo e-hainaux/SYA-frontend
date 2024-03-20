@@ -10,7 +10,7 @@ const Formulaire = () => {
   const [commentaire, setCommentaire] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Vérification des champs obligatoires
@@ -21,8 +21,35 @@ const Formulaire = () => {
       return;
     }
 
-    // Traitement du formulaire (envoi des données, etc.)
-    // À compléter selon besoins
+    // Données à envoyer au backend
+    const formData = {
+      prenom,
+      nom,
+      societe,
+      email,
+      telephone,
+      commentaire,
+    };
+
+    try {
+      // Envoi des données au backend
+      const response = await fetch("http://localhost:3000/form/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setMessage("Votre formulaire a été soumis avec succès.");
+      } else {
+        setMessage("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
+      }
+    } catch (error) {
+      setMessage("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
+      console.error("Erreur lors de l'envoi du formulaire:", error);
+    }
 
     // Réinitialisation du formulaire après soumission
     setPrenom("");
@@ -31,7 +58,6 @@ const Formulaire = () => {
     setEmail("");
     setTelephone("");
     setCommentaire("");
-    setMessage("Votre formulaire a été soumis avec succès.");
   };
 
   return (
