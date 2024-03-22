@@ -3,7 +3,7 @@ import styles from "../styles/Formulaire.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Formulaire = () => {
-  const siteKey = "6Lf_caEpAAAAAB5n0N3KXiTBJPphpssV5ZhXi5gB";
+  const siteKey = "6LcKjaEpAAAAAP2QjeO_XKC2wS5sQsXLJaeHJ2sr";
 
   const [token, setToken] = useState(null);
   const [prenom, setPrenom] = useState("");
