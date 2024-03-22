@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import styles from "../styles/Formulaire.module.css";
-// import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Formulaire = () => {
-  // const siteKey = process.env.RECAPTCHA_SITE_KEY;
+  const siteKey = "6Lf_caEpAAAAAB5n0N3KXiTBJPphpssV5ZhXi5gB";
 
-  const [token, setToken] = useState("");
-  const onRecaptchaChange = (token) => {
-    setToken(token);
-  };
-
+  const [token, setToken] = useState(null);
   const [prenom, setPrenom] = useState("");
   const [nom, setNom] = useState("");
   const [societe, setSociete] = useState("");
@@ -29,6 +25,51 @@ const Formulaire = () => {
       return;
     }
 
+    // Validation des champs avec des expressions régulières
+    const prenomRegex = /^[A-Za-zÀ-ÿ-]{1,20}$/;
+    const nomRegex = /^[A-Za-zÀ-ÿ-]{1,20}$/;
+    const societeRegex = /^[A-Za-z0-9.-]*$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const telephoneRegex = /^(0|\+33|0033)[1-9]([-. ]?[0-9]{2}){4}$/;
+
+    if (!prenomRegex.test(prenom)) {
+      setMessage(
+        "Le prénom doit utiliser des lettres uniquement et contenir au maximum 20 caractères."
+      );
+      return;
+    }
+
+    if (!nomRegex.test(nom)) {
+      setMessage(
+        "Le nom doit utiliser des lettres uniquement et contenir au maximum 20 caractères."
+      );
+      return;
+    }
+
+    if (societe && !societeRegex.test(societe)) {
+      setMessage(
+        "La société doit contenir uniquement des lettres, des chiffres et les caractères point et tiret simple."
+      );
+      return;
+    }
+
+    if (email && !emailRegex.test(email)) {
+      setMessage(
+        "L'adresse mail doit correspondre au format adresse@site.extension."
+      );
+      return;
+    }
+
+    if (telephone && !telephoneRegex.test(telephone)) {
+      setMessage(
+        "Le numéro de téléphone doit utiliser uniquement des chiffres et correspondre à un numéro de portable ou de fixe français."
+      );
+      return;
+    }
+
+    // Nettoyage du commentaire en supprimant tout le code HTML
+    const cleanedCommentaire = commentaire.replace(/(<([^>]+)>)/gi, "");
+
     // Données à envoyer au backend
     const formData = {
       token,
@@ -37,7 +78,7 @@ const Formulaire = () => {
       societe,
       email,
       telephone,
-      commentaire,
+      commentaire: cleanedCommentaire,
     };
 
     try {
@@ -66,6 +107,7 @@ const Formulaire = () => {
       setMessage("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
       console.error("Erreur lors de l'envoi du formulaire:", error);
     }
+    setToken(null);
   };
 
   return (
@@ -137,8 +179,11 @@ const Formulaire = () => {
           </div>
           <div className={styles.message}>{message}</div>
           <div className={styles.btnContainer}>
-            {/* <ReCAPTCHA sitekey={siteKey} onChange={onRecaptchaChange} /> */}
-            <button type="submit" className={styles.button}>
+            <ReCAPTCHA
+              sitekey={siteKey}
+              onChange={(value) => setToken(value)}
+            />
+            <button disabled={!token} type="submit" className={styles.button}>
               Envoyer
             </button>
           </div>

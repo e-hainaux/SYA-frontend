@@ -58,7 +58,8 @@
 .btnContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 .button {
