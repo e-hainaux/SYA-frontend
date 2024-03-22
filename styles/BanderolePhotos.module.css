@@ -28,7 +28,7 @@
 
 .objectFit {
   width: 100%;
-  /* height: 250px; */
+  height: auto;
   padding: 0;
   margin: 0;
   border: none;

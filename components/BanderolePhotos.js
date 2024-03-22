@@ -17,7 +17,7 @@ const BanderolePhotos = () => {
           className={styles.objectFit}
           src={yogaUpperView}
           alt="yoga upper view"
-          objectFit="contain"
+          // objectFit="contain"
         />
       </div>
 
