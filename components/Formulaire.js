@@ -83,13 +83,16 @@ const Formulaire = () => {
 
     try {
       // Envoi des données au backend
-      const response = await fetch("http://localhost:3000/form/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://sya-backend.vercel.app//form/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         setMessage("Votre formulaire a été soumis avec succès.");
