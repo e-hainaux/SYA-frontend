@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import styles from "../styles/Formulaire.module.css";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 const Formulaire = () => {
+  // const siteKey = process.env.RECAPTCHA_SITE_KEY;
+
+  const [token, setToken] = useState("");
+  const onRecaptchaChange = (token) => {
+    setToken(token);
+  };
+
   const [prenom, setPrenom] = useState("");
   const [nom, setNom] = useState("");
   const [societe, setSociete] = useState("");
@@ -23,6 +31,7 @@ const Formulaire = () => {
 
     // Données à envoyer au backend
     const formData = {
+      token,
       prenom,
       nom,
       societe,
@@ -43,6 +52,13 @@ const Formulaire = () => {
 
       if (response.ok) {
         setMessage("Votre formulaire a été soumis avec succès.");
+        // Réinitialisation du formulaire après soumission
+        setPrenom("");
+        setNom("");
+        setSociete("");
+        setEmail("");
+        setTelephone("");
+        setCommentaire("");
       } else {
         setMessage("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
       }
@@ -50,14 +66,6 @@ const Formulaire = () => {
       setMessage("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
       console.error("Erreur lors de l'envoi du formulaire:", error);
     }
-
-    // Réinitialisation du formulaire après soumission
-    setPrenom("");
-    setNom("");
-    setSociete("");
-    setEmail("");
-    setTelephone("");
-    setCommentaire("");
   };
 
   return (
@@ -129,6 +137,7 @@ const Formulaire = () => {
           </div>
           <div className={styles.message}>{message}</div>
           <div className={styles.btnContainer}>
+            {/* <ReCAPTCHA sitekey={siteKey} onChange={onRecaptchaChange} /> */}
             <button type="submit" className={styles.button}>
               Envoyer
             </button>
