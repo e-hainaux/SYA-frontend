@@ -90,7 +90,7 @@ const Formulaire = () => {
           method: "POST",
           headers: {
             "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
           body: JSON.stringify(formData),
         }
