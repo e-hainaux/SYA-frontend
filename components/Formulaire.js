@@ -4,7 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 require("dotenv").config();
 
 const Formulaire = () => {
-  const siteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
+  const siteKey = "6LcKjaEpAAAAAP2QjeO_XKC2wS5sQsXLJaeHJ2sr";
 
   const [token, setToken] = useState(null);
   const [prenom, setPrenom] = useState("");
