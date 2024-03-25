@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styles from "../styles/Formulaire.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
+require("dotenv").config();
 
 const Formulaire = () => {
-  const siteKey = "6LcKjaEpAAAAAP2QjeO_XKC2wS5sQsXLJaeHJ2sr";
+  const siteKey = process.env.RECAPTCHA_SITE_KEY;
 
   const [token, setToken] = useState(null);
   const [prenom, setPrenom] = useState("");
@@ -86,7 +87,7 @@ const Formulaire = () => {
       const response = await fetch(
         "https://sya-backend.vercel.app/form/send-email",
         {
-          method: "POST",
+          methods: ["POST"],
           headers: {
             "Content-Type": "application/json",
           },
