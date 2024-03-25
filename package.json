@@ -2,7 +2,6 @@
   "name": "nextjs-template",
   "version": "1.0.0",
   "private": true,
-  "proxy": "https://sya-backend.vercel.app/",
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
