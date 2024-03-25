@@ -89,7 +89,7 @@ const Formulaire = () => {
         {
           method: "POST",
           headers: {
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://sya-frontend.vercel.app/",
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
