@@ -87,7 +87,7 @@ const Formulaire = () => {
       const response = await fetch(
         "https://sya-backend.vercel.app/form/send-email",
         {
-          methods: ["POST"],
+          method: "POST",
           headers: {
             "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
