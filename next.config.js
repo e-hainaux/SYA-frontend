@@ -11,7 +11,10 @@ const nextConfig = {
         source: "/api/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
-          { key: "Access-Control-Allow-Origin", value: "*" }, // Replace with your frontend origin for better security
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "https://sya-frontend.vercel.app/",
+          }, // Replace with your frontend origin for better security
           {
             key: "Access-Control-Allow-Methods",
             value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
