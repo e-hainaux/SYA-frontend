@@ -69,8 +69,8 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .a {
     font-size: 0.65rem;
   }
-}
+} */
