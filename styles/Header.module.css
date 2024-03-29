@@ -46,6 +46,11 @@
 }
 
 @media screen and (max-width: 700px) {
+  .headerMainContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
   .headerMainContainer q {
     font-size: 1rem;
   }
