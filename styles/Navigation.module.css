@@ -37,7 +37,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: auto;
   height: auto;
   /* border: 1px solid red; */
 }
@@ -67,4 +67,10 @@
 }
 .pointer {
   cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .a {
+    font-size: 0.65rem;
+  }
 }
