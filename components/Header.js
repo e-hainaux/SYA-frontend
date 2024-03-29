@@ -16,6 +16,8 @@ function Header() {
             alt="Image LOGO"
             min-width={300}
             min-height={300}
+            width="80%"
+            height="80%"
           />
         </div>
         <q>Des pauses dans la pose guidées par quelques proses.</q>
