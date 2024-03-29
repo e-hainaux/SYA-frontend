@@ -44,3 +44,9 @@
   margin-top: 100px;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 700px) {
+  .headerMainContainer q {
+    font-size: 1rem;
+  }
+}
