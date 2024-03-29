@@ -1,0 +1,62 @@
+.segment {
+  text-align: justify;
+  margin: 0;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+.titre {
+  color: whitesmoke;
+  width: 50%;
+  height: 45px;
+  max-width: 300px;
+  min-width: 250px;
+  font-size: 1.75rem;
+  text-align: center;
+  vertical-align: middle;
+  margin: 30px auto;
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 20px 5px 20px 5px;
+}
+.titreSecondaire {
+  font-size: 1.4rem;
+  padding: 30px 0 15px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+.paragraphe {
+  width: 95%;
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 0 auto;
+  text-indent: 30px;
+  padding: 15px 30px;
+  background-color: #ebebeb;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 800px) {
+  .segment {
+    padding: 100px;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .segment {
+    padding: 100px 10px;
+  }
+  .blocPrestas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .presta {
+    width: 30%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
