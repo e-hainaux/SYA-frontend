@@ -13,6 +13,7 @@ import Temoignages from "./Temoignages";
 import Actus from "./Actus";
 import Footer from "./Footer";
 import Formulaire from "./Formulaire";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 function Home() {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
@@ -53,6 +54,7 @@ function Home() {
       )}
       <Header />
       <Navigation />
+      <ScrollToTopButton />
       <BanderolePhotos />
       <PresentationSara />
       <Break />
