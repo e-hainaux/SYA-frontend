@@ -15,7 +15,7 @@ function Navigation() {
         <ul className={styles.ul}>
           <li className={styles.linkContainer}>
             <ScrollLink
-              className={`${isHoveredSara ? styles.hovered : styles.a} ${
+              className={`${isHoveredSara ? styles.hovered : styles.normal} ${
                 styles.pointer
               }`}
               to="PresentationSara"
@@ -24,40 +24,40 @@ function Navigation() {
               onMouseEnter={() => setIsHoveredSara(true)}
               onMouseLeave={() => setIsHoveredSara(false)}
             >
-              Sara
+              <p className={styles.linkText}>Sara</p>
             </ScrollLink>
           </li>
           <li className={styles.linkContainer}>
             <ScrollLink
-              className={`${isHoveredPrestations ? styles.hovered : styles.a} ${
-                styles.pointer
-              }`}
+              className={`${
+                isHoveredPrestations ? styles.hovered : styles.normal
+              } ${styles.pointer}`}
               to="Prestations"
               smooth={true}
               duration={500}
               onMouseEnter={() => setIsHoveredPrestations(true)}
               onMouseLeave={() => setIsHoveredPrestations(false)}
             >
-              Prestations
+              <p className={styles.linkText}>Prestations</p>
             </ScrollLink>
           </li>
           <li className={styles.linkContainer}>
             <ScrollLink
-              className={`${isHoveredTemoignages ? styles.hovered : styles.a} ${
-                styles.pointer
-              }`}
+              className={`${
+                isHoveredTemoignages ? styles.hovered : styles.normal
+              } ${styles.pointer}`}
               to="Temoignages"
               smooth={true}
               duration={500}
               onMouseEnter={() => setIsHoveredTemoignages(true)}
               onMouseLeave={() => setIsHoveredTemoignages(false)}
             >
-              Témoignages
+              <p className={styles.linkText}>Témoignages</p>
             </ScrollLink>
           </li>
           <li className={styles.linkContainer}>
             <ScrollLink
-              className={`${isHoveredActus ? styles.hovered : styles.a} ${
+              className={`${isHoveredActus ? styles.hovered : styles.normal} ${
                 styles.pointer
               }`}
               to="Actus"
@@ -66,21 +66,21 @@ function Navigation() {
               onMouseEnter={() => setIsHoveredActus(true)}
               onMouseLeave={() => setIsHoveredActus(false)}
             >
-              Actus
+              <p className={styles.linkText}>Actus</p>
             </ScrollLink>
           </li>
           <li className={styles.linkContainer}>
             <ScrollLink
-              className={`${isHoveredContact ? styles.hovered : styles.a} ${
-                styles.pointer
-              }`}
+              className={`${
+                isHoveredContact ? styles.hovered : styles.normal
+              } ${styles.pointer}`}
               to="Formulaire"
               smooth={true}
               duration={500}
               onMouseEnter={() => setIsHoveredContact(true)}
               onMouseLeave={() => setIsHoveredContact(false)}
             >
-              Contact
+              <p className={styles.linkText}>Contact</p>
             </ScrollLink>
           </li>
         </ul>
